@@ -25,7 +25,7 @@ spec:
         - path: {{ default "" .path }}
           backend:
             # serviceName: {{ template "fullname" $ }}
-            serviceName: "{{ .Release.Name }}-wp-svc"
+            serviceName: "{{ $.Release.Name }}-wp-svc"
             servicePort: 80
 {{- if .tls }}
   tls:
