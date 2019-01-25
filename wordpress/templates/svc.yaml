@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
+  # name: {{ template "fullname" . }}
   name: "{{ .Release.Name }}-wp-svc"
   labels:
     app: {{ template "fullname" . }}
